@@ -4,7 +4,7 @@
   "files": [
     {
       "name": "custom-card.tsx",
-      "content": "const InputFieldAlex = ({ label, ...props }: { label: string; idProps: string }) => { return (\\u003cdiv\\u003e\\u003clabel htmlFor={props.idProps} className=\u0027block text-sm font-medium text-gray-700\u0027\\u003e{label}\\u003c/label\\u003e\\u003cinput id={props.idProps} type=\u0027text\u0027 className=\u0027mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm\u0027 {...props}/>\\u003c/div\\u003e);};export default InputFieldAlex;"
+      "content": "const InputFieldAlex = ({ label, ...props }: { label: string; idProps: string }) =\u003e { return (\\u003cdiv\\u003e\\u003clabel htmlFor={props.idProps} className=\u0027block text-sm font-medium text-gray-700\u0027\\u003e{label}\\u003c/label\\u003e\\u003cinput id={props.idProps} type=\u0027text\u0027 className=\u0027mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm\u0027 {...props}/\u003e\\u003c/div\\u003e);};export default InputFieldAlex;"
     }
   ],
   "type": "components:ui"
