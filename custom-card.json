@@ -1,11 +1,11 @@
 {
-	"name": "custom-card",
-	"dependencies": ["@/components/ui/card"],
-	"files": [
-		{
-			"name": "custom-card.tsx",
-			"content": "import React from 'react'\nimport { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'\nimport { cn } from '@/lib/utils'\n\ninterface CustomCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  title: string\n  description?: string\n  footer?: React.ReactNode\n}\n\nexport const CustomCard = React.forwardRef<HTMLDivElement, CustomCardProps>(\n  ({ className, title, description, footer, children, ...props }, ref) => {\n    return (\n      <Card ref={ref} className={cn('w-[380px]', className)} {...props}>\n        <CardHeader>\n          <CardTitle>{title}</CardTitle>\n          {description && <CardDescription>{description}</CardDescription>}\n        </CardHeader>\n        <CardContent>{children}</CardContent>\n        {footer && <CardFooter>{footer}</CardFooter>}\n      </Card>\n    )\n  }\n)\n\nCustomCard.displayName = 'CustomCard'\n"
-		}
-	],
-	"type": "components:ui"
+  "name": "custom-card",
+  "dependencies": ["@/components/ui/card"],
+  "files": [
+    {
+      "name": "custom-card.tsx",
+      "content": "import * as React from 'react'\nimport { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'\n\ninterface CustomCardProps {\n  title: string\n  children: React.ReactNode\n}\n\nexport function CustomCard({ title, children }: CustomCardProps) {\n  return (\n    <Card className=\"w-[300px]\">\n      <CardHeader>\n        <CardTitle>{title}</CardTitle>\n      </CardHeader>\n      <CardContent>{children}</CardContent>\n    </Card>\n  )\n}"
+    }
+  ],
+  "type": "components:ui"
 }
