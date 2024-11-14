@@ -4,7 +4,7 @@
   "files": [
     {
       "name": "custom-card.tsx",
-      "content": "import * as React from 'react'\nimport { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'\n\ninterface CustomCardProps {\n  title: string\n  children: React.ReactNode\n}\n\nexport function CustomCard({ title, children }: CustomCardProps) {\n  return (\n    <Card className=\"w-[300px]\">\n      <CardHeader>\n        <CardTitle>{title}</CardTitle>\n      </CardHeader>\n      <CardContent>{children}</CardContent>\n    </Card>\n  )\n}"
+      "content": "const InputFieldAlex = ({ label, ...props }: { label: string; idProps: string }) => { return (<div><label htmlFor={props.idProps} className='block text-sm font-medium text-gray-700'>{label}</label><input id={props.idProps} type='text' className='mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm' {...props}/></div>);};export default InputFieldAlex;"
     }
   ],
   "type": "components:ui"
