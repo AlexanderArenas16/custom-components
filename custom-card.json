@@ -1,0 +1,11 @@
+{
+	"name": "custom-card",
+	"dependencies": ["@/components/ui/card"],
+	"files": [
+		{
+			"name": "custom-card.tsx",
+			"content": "import React from 'react'\nimport { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card'\nimport { cn } from '@/lib/utils'\n\ninterface CustomCardProps extends React.HTMLAttributes<HTMLDivElement> {\n  title: string\n  description?: string\n  footer?: React.ReactNode\n}\n\nexport const CustomCard = React.forwardRef<HTMLDivElement, CustomCardProps>(\n  ({ className, title, description, footer, children, ...props }, ref) => {\n    return (\n      <Card ref={ref} className={cn('w-[380px]', className)} {...props}>\n        <CardHeader>\n          <CardTitle>{title}</CardTitle>\n          {description && <CardDescription>{description}</CardDescription>}\n        </CardHeader>\n        <CardContent>{children}</CardContent>\n        {footer && <CardFooter>{footer}</CardFooter>}\n      </Card>\n    )\n  }\n)\n\nCustomCard.displayName = 'CustomCard'\n"
+		}
+	],
+	"type": "components:ui"
+}
