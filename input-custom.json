@@ -1,0 +1,18 @@
+{
+  "name": "InputField",
+  "description": "An input field with a label",
+  "category": "Form",
+  "component": "./components/InputField.jsx",
+  "props": [
+    {
+      "name": "label",
+      "type": "string",
+      "description": "The label for the input field"
+    },
+    {
+      "name": "id",
+      "type": "string",
+      "description": "The unique identifier for the input field"
+    }
+  ]
+}
